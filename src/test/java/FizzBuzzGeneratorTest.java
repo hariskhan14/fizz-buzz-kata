@@ -32,10 +32,21 @@ public class FizzBuzzGeneratorTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"5","10","15"})
+    @CsvSource({"5","10","20"})
     void shouldReturnBuzzIfInputIsDivisibleBy5(int input) {
         String res = this.fizzBuzzGenerator.gen(input);
         Assertions.assertEquals("Buzz", res);
     }
 
+    @Test
+    void shouldReturnFizzBuzzIfNumberIs15() {
+        String res = this.fizzBuzzGenerator.gen(15);
+        Assertions.assertEquals("FizzBuzz", res);
+    }
+
+    @Test
+    void shouldReturnFizzBuzzIfNumberIs30() {
+        String res = this.fizzBuzzGenerator.gen(30);
+        Assertions.assertEquals("FizzBuzz", res);
+    }
 }
