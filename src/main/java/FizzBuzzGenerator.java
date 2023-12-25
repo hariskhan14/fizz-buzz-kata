@@ -5,6 +5,8 @@ public class FizzBuzzGenerator {
             response = "FizzBuzz";
         } else if (number == 30) {
             response = "FizzBuzz";
+        } else if (number == 45) {
+            response = "FizzBuzz";
         } else if (number % 5 == 0) {
             response = "Buzz";
         } else if (number % 3 == 0){

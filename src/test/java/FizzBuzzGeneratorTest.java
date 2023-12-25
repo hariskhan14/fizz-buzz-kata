@@ -49,4 +49,10 @@ public class FizzBuzzGeneratorTest {
         String res = this.fizzBuzzGenerator.gen(30);
         Assertions.assertEquals("FizzBuzz", res);
     }
+
+    @Test
+    void shouldReturnFizzBuzzIfNumberIs45() {
+        String res = this.fizzBuzzGenerator.gen(45);
+        Assertions.assertEquals("FizzBuzz", res);
+    }
 }
