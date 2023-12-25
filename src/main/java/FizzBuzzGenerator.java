@@ -1,8 +1,12 @@
 public class FizzBuzzGenerator {
     public String gen(int number) {
+        String response = String.valueOf(number);
         if (number == 5) {
-            return "Buzz";
+            response = "Buzz";
+        } else {
+            response = "Fizz";
         }
-        return "Fizz";
+
+        return response;
     }
 }
