@@ -29,4 +29,10 @@ public class FizzBuzzGeneratorTest {
         String res = this.fizzBuzzGenerator.gen(5);
         Assertions.assertEquals("Buzz", res);
     }
+
+    @Test
+    void returnBuzzIfInputIs10() {
+        String res = this.fizzBuzzGenerator.gen(10);
+        Assertions.assertEquals("Buzz", res);
+    }
 }
