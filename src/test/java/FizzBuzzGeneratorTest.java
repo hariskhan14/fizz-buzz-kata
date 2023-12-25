@@ -18,6 +18,13 @@ public class FizzBuzzGeneratorTest {
     }
 
     @ParameterizedTest
+    @CsvSource({"1","2","4"})
+    void shouldReturnNumberItself(int input) {
+        String res = this.fizzBuzzGenerator.gen(input);
+        Assertions.assertEquals(String.valueOf(input), res);
+    }
+
+    @ParameterizedTest
     @CsvSource({"3","6","9"})
     void shouldReturnFizzIfInputIsDivisibleBy3(int input) {
         String res = this.fizzBuzzGenerator.gen(input);

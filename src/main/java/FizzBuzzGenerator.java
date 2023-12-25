@@ -3,7 +3,7 @@ public class FizzBuzzGenerator {
         String response = String.valueOf(number);
         if (number % 5 == 0) {
             response = "Buzz";
-        } else {
+        } else if (number % 3 == 0){
             response = "Fizz";
         }
 
