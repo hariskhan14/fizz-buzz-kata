@@ -1,29 +1,9 @@
-# Java JUnit4
+# fizz-buzz-kata
+Practicing TDD using Fizz Buzz Coding Kata
 
-A minimal setup with Java, [JUnit4](https://junit.org/junit4/), [AssertJ](https://assertj.github.io/doc/) and [Mockito](https://site.mockito.org/) to get you started.
-
-You can use [gradle](https://gradle.org/) or [maven](https://maven.apache.org/).
-
-## Setup
-
-    git clone https://github.com/swkBerlin/kata-bootstraps
-    cd java/junit4
-
-Open as preexisting project in your favorite IDE and choose between gradle or maven nature.
-
-## (optional) IDE Setup
-
-Run `./gradlew idea` to build [idea](https://www.jetbrains.com/idea) project.
-
-## Running Tests
-
-To execute the tests either run `gradlew test`, `mvn test` or run the tests from the IDE you are using.
-
-## Test Libraries Available from the Get-Go
-- [JUnit 4.13.2](https://github.com/junit-team/junit4/blob/HEAD/doc/ReleaseNotes4.13.2.md)
-- [AssertJ 3.22.0](https://assertj.github.io/doc/#assertj-core-release-notes)
-- [Mockito 4.3.1](https://github.com/mockito/mockito/releases)
-
-This repo was tested with [idea](https://www.jetbrains.com/idea) [2020.3.1](https://confluence.jetbrains.com/display/IDEADEV/IntelliJ+IDEA+2020.3.1+%28203.6682.168+build%29+Release+Notes), if you encounter problems please open an issue or send a pull request.
-
-Have fun!
+# Your task
+- Write a program that prints one line for each number from 1 to 100
+- Usually just print the number itself.
+- For multiples of three print Fizz instead of the number
+- For the multiples of five print Buzz instead of the number
+- For numbers which are multiples of both three and five print FizzBuzz instead of the number
