@@ -38,21 +38,10 @@ public class FizzBuzzGeneratorTest {
         Assertions.assertEquals("Buzz", res);
     }
 
-    @Test
-    void shouldReturnFizzBuzzIfNumberIs15() {
-        String res = this.fizzBuzzGenerator.gen(15);
-        Assertions.assertEquals("FizzBuzz", res);
-    }
-
-    @Test
-    void shouldReturnFizzBuzzIfNumberIs30() {
-        String res = this.fizzBuzzGenerator.gen(30);
-        Assertions.assertEquals("FizzBuzz", res);
-    }
-
-    @Test
-    void shouldReturnFizzBuzzIfNumberIs45() {
-        String res = this.fizzBuzzGenerator.gen(45);
+    @ParameterizedTest
+    @CsvSource({"15","30","45"})
+    void shouldReturnFizzBuzzIfInputIsDivisibleBy3And5(int input) {
+        String res = this.fizzBuzzGenerator.gen(input);
         Assertions.assertEquals("FizzBuzz", res);
     }
 }
