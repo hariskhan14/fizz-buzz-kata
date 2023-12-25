@@ -1,6 +1,7 @@
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class FizzBuzzGeneratorTest {
     //Arrange - requirements
@@ -9,28 +10,16 @@ public class FizzBuzzGeneratorTest {
     //Note: writing the assertion first since we know what to test and then go backwards
 
     private FizzBuzzGenerator fizzBuzzGenerator;
-    @Before
+
+    @BeforeEach
     public void setup() {
         this.fizzBuzzGenerator = new FizzBuzzGenerator();
     }
 
-    @Test
-    public void shouldReturnFizzIfInputIs3() {
-        String res = this.fizzBuzzGenerator.gen(3);
-        Assert.assertEquals("Fizz", res);
-    }
-
-    @Test
-    public void shouldReturnFizzIfInputIs6() {
-
-        String res = this.fizzBuzzGenerator.gen(6);
-        Assert.assertEquals("Fizz", res);
-    }
-
-    @Test
-    public void shouldReturnFizzIfInputIs9() {
-
-        String res = this.fizzBuzzGenerator.gen(9);
-        Assert.assertEquals("Fizz", res);
+    @ParameterizedTest
+    @CsvSource({"3,6,9"})
+    void generate(int input) {
+        String res = this.fizzBuzzGenerator.gen(input);
+        Assertions.assertEquals("Fizz", res);
     }
 }
